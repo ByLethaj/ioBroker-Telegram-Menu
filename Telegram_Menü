@@ -1,0 +1,1085 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="T)+(ml$o%8/,L@.eQV9W">Menue_Uebersicht_empfaenger</variable>
+    <variable id=".4UE#;T9x.ZuD/Qs5#7Z">Menue_3D_Drucker_empfaenger</variable>
+    <variable id="?=7-YlY4n?zEUn.TMU+4">Menue_3D_Drucker_Aus_empfaenger</variable>
+    <variable id="l[W*Yy%ZPP5O#`+::D`-">Menue_Schaltungen_empfaenger</variable>
+    <variable id="A+MNuw3@}4rwqMt$|1Y`">Telegram_Text</variable>
+    <variable id="ha8QX~M5_bV6YcIN_l`L">Telegram_Empfaenger</variable>
+    <variable id="gnB@?X,5r7x@g#b+v[NJ">Letzter_Absender</variable>
+    <variable id="zTjaE_oO,ADzSxRD]xPo">Vorletzter_Text</variable>
+    <variable id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</variable>
+    <variable id="=A[nEvedx/u`(m[tCxjp">Letzter_Text_klein</variable>
+  </variables>
+  <block type="procedures_defcustomnoreturn" id="JwmReO-9.#N^w%p0?9K}" x="813" y="113">
+    <mutation statements="false">
+      <arg name="Menue_Uebersicht_empfaenger" varid="T)+(ml$o%8/,L@.eQV9W"></arg>
+    </mutation>
+    <field name="NAME">Menue_Uebersicht_Sven</field>
+    <field name="SCRIPT">c2VuZFRvKCd0ZWxlZ3JhbS4wJywgew0KICAgIHVzZXI6IChNZW51ZV9VZWJlcnNpY2h0X2VtcGZhZW5nZXIpLA0KICAgIHRleHQ6ICAnQml0dGUgd8OkaGxlbicsDQogICAgcmVwbHlfbWFya3VwOiB7DQogICAga2V5Ym9hcmQ6IFsNCiAgICAgICAgICAgIFsnVGVtcGVyYXR1ciddLA0KICAgICAgICAgICAgWydTY2hhbHR1bmdlbiddLA0KICAgICAgICAgICAgWydIZWl6dW5nJ10NCiAgICAgICAgXSwNCiAgICAgICAgcmVzaXplX2tleWJvYXJkOiAgIHRydWUsDQogICAgICAgIG9uZV90aW1lX2tleWJvYXJkOiB0cnVlDQogICAgfQ0KfSk7</field>
+    <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+  </block>
+  <block type="procedures_defcustomnoreturn" id=".~M2H,AJy.C@Q#5OQnct" x="813" y="138">
+    <mutation statements="false">
+      <arg name="Menue_3D_Drucker_empfaenger" varid=".4UE#;T9x.ZuD/Qs5#7Z"></arg>
+    </mutation>
+    <field name="NAME">Menue_Temperatur</field>
+    <field name="SCRIPT">c2VuZFRvKCd0ZWxlZ3JhbS4wJywgew0KICAgIHVzZXI6IChNZW51ZV8zRF9EcnVja2VyX2VtcGZhZW5nZXIpLA0KICAgIHRleHQ6ICAnQml0dGUgd8OkaGxlbicsDQogICAgcmVwbHlfbWFya3VwOiB7DQogICAga2V5Ym9hcmQ6IFsNCiAgICAgICAgICAgIFsnw5xiZXJzaWNodCddLA0KICAgICAgICAgICAgWydUZW1wZXJhdHVyIFdvaG56aW1tZXInLCAnVGVtcGVyYXR1ciBLaW5kZXJ6aW1tZXInXSwNCiAgICAgICAgICAgIFsnVGVtcGVyYXR1ciBLbGluZ2VsJywgJ0Nvb21pbmcgU29vbiddLA0KICAgICAgICAgICAgWydDb29taW5nIFNvb24nLCAnQ29vbWluZyBTb29uJ10sDQogICAgICAgIF0sDQogICAgcmVzaXplX2tleWJvYXJkOiAgIHRydWUsDQogICAgb25lX3RpbWVfa2V5Ym9hcmQ6IHRydWUNCiAgICB9DQp9KTs=</field>
+    <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+  </block>
+  <block type="on_ext" id="!8B]z7wO)w*bD^7(714W" x="365" y="165">
+    <mutation xmlns="http://www.w3.org/1999/xhtml" items="1"></mutation>
+    <field name="CONDITION">any</field>
+    <field name="ACK_CONDITION"></field>
+    <value name="OID0">
+      <shadow xmlns="http://www.w3.org/1999/xhtml" type="field_oid" id="J=/9IeQnq:FSa`bM5)PG">
+        <field name="oid">default</field>
+      </shadow>
+      <block type="field_oid" id="GDubi_#J2DI7*n0ep|.D">
+        <field name="oid">telegram.0.communicate.request</field>
+      </block>
+    </value>
+    <statement name="STATEMENT">
+      <block type="variables_set" id="wx1Id^cN]ztTBpbxGq9u" collapsed="true">
+        <field name="VAR" id="gnB@?X,5r7x@g#b+v[NJ">Letzter_Absender</field>
+        <value name="VALUE">
+          <block type="text_getSubstring" id="!{g./8(or54hvEyb1P`f" inline="false">
+            <mutation at1="true" at2="true"></mutation>
+            <field name="WHERE1">FROM_START</field>
+            <field name="WHERE2">FROM_START</field>
+            <value name="STRING">
+              <block type="on_source" id="IH2.D,NF:~A]W/4FHzgx">
+                <field name="ATTR">state.val</field>
+              </block>
+            </value>
+            <value name="AT1">
+              <block type="math_number" id="e3-d;DM::ScEpRh}H!@u">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+            <value name="AT2">
+              <block type="math_arithmetic" id="!6WqqSNO@l{-K;,0UXg-" inline="false">
+                <field name="OP">MINUS</field>
+                <value name="A">
+                  <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="r%ebl4IUX*XWQmsp|?rw">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="text_indexOf" id="zZ:Zi`joE?XuMOeVt|R6">
+                    <field name="END">FIRST</field>
+                    <value name="VALUE">
+                      <block type="on_source" id="X)hVqhY|6Z+@Cb?r}b4`">
+                        <field name="ATTR">state.val</field>
+                      </block>
+                    </value>
+                    <value name="FIND">
+                      <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="53KpH_VzOt@uW50iFuYJ">
+                        <field name="TEXT">abc</field>
+                      </shadow>
+                      <block type="text" id="1]2I2PG:.3LKq!TKaRwq">
+                        <field name="TEXT">]</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="+bTY;ti{LICv`mEp;Zjv">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="math_number" id="eBIB);yoT|)BAtWQsxk%">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="R+I)j*W!*WCgD`aI*xvD" collapsed="true">
+            <field name="VAR" id="zTjaE_oO,ADzSxRD]xPo">Vorletzter_Text</field>
+            <value name="VALUE">
+              <block type="text_getSubstring" id="S1u?yDc9reT)Ec4r6qxD" inline="false">
+                <mutation at1="true" at2="false"></mutation>
+                <field name="WHERE1">FROM_START</field>
+                <field name="WHERE2">LAST</field>
+                <value name="STRING">
+                  <block type="on_source" id="vRkU-n_2.RDdV:yB5D}+">
+                    <field name="ATTR">oldState.val</field>
+                  </block>
+                </value>
+                <value name="AT1">
+                  <block type="math_arithmetic" id=",ea%8x4@]`RM14@d5WSq" inline="false">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="A`TLz5Lbfgw;=mJOp}(^">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="text_indexOf" id="cG:l1K/c%`5;UEWzhba+" inline="false">
+                        <field name="END">FIRST</field>
+                        <value name="VALUE">
+                          <block type="on_source" id="X0GqXOgj+:O_w-+5);g9">
+                            <field name="ATTR">oldState.val</field>
+                          </block>
+                        </value>
+                        <value name="FIND">
+                          <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="P5s;aJDPT*F;y(,VtRBs">
+                            <field name="TEXT">abc</field>
+                          </shadow>
+                          <block type="text" id="3TWGILQ/M45cCy9uQ]Z(">
+                            <field name="TEXT">]</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="-9+`M14/p._`PvUM3`yk">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="math_number" id="d6OXjZVex}I+,5-:Yl!m">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="D?Gsdcua?{EMLU):!p{a" collapsed="true">
+                <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                <value name="VALUE">
+                  <block type="text_getSubstring" id=";V75FO4VtMZ3nP[Seh:A" inline="false">
+                    <mutation at1="true" at2="false"></mutation>
+                    <field name="WHERE1">FROM_START</field>
+                    <field name="WHERE2">LAST</field>
+                    <value name="STRING">
+                      <block type="on_source" id="8(|o6e}c_LrFrEoPepdW">
+                        <field name="ATTR">state.val</field>
+                      </block>
+                    </value>
+                    <value name="AT1">
+                      <block type="math_arithmetic" id="h7_S)hH`5@RA?#U)5g=1" inline="false">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="A`TLz5Lbfgw;=mJOp}(^">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="text_indexOf" id="0e*(2Dhq5d1#U;xsFNn%" inline="false">
+                            <field name="END">FIRST</field>
+                            <value name="VALUE">
+                              <block type="on_source" id="F{10J^|L`v=G`3f=^kJc">
+                                <field name="ATTR">state.val</field>
+                              </block>
+                            </value>
+                            <value name="FIND">
+                              <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="P5s;aJDPT*F;y(,VtRBs">
+                                <field name="TEXT">abc</field>
+                              </shadow>
+                              <block type="text" id="c,}EJ]POpPpb|nI#.!zb">
+                                <field name="TEXT">]</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="-9+`M14/p._`PvUM3`yk">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="math_number" id="(Kg1M+/J_!`LmKq-sU!S">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="b=~HQ{iB`[wPTakV^@ZM" collapsed="true">
+                    <field name="VAR" id="=A[nEvedx/u`(m[tCxjp">Letzter_Text_klein</field>
+                    <value name="VALUE">
+                      <block type="text_changeCase" id="k}YBs[0Ii[p;TfALl+_1">
+                        <field name="CASE">LOWERCASE</field>
+                        <value name="TEXT">
+                          <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="~FExu?j/U1Rnc13CP(#-">
+                            <field name="TEXT">abc</field>
+                          </shadow>
+                          <block type="text_getSubstring" id="Fsbtn^.cVRxgb_kjg}n1" inline="false">
+                            <mutation at1="true" at2="false"></mutation>
+                            <field name="WHERE1">FROM_START</field>
+                            <field name="WHERE2">LAST</field>
+                            <value name="STRING">
+                              <block type="on_source" id="dP}]L2;[AzL`jTyPK;8Y">
+                                <field name="ATTR">state.val</field>
+                              </block>
+                            </value>
+                            <value name="AT1">
+                              <block type="math_arithmetic" id="VChSZL[^!pRA1U3/K~ic" inline="false">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="A`TLz5Lbfgw;=mJOp}(^">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="text_indexOf" id=";Jv+Wu:no!I1t}5^%GMI" inline="false">
+                                    <field name="END">FIRST</field>
+                                    <value name="VALUE">
+                                      <block type="on_source" id="w;+qgG;S]7QbgfeoL*h1">
+                                        <field name="ATTR">state.val</field>
+                                      </block>
+                                    </value>
+                                    <value name="FIND">
+                                      <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="P5s;aJDPT*F;y(,VtRBs">
+                                        <field name="TEXT">abc</field>
+                                      </shadow>
+                                      <block type="text" id="0YMCl~TtZfZ/`KZgV6qi">
+                                        <field name="TEXT">]</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="2ugj/NH#m(u7yrzi++3:">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="math_number" id=":f/Ow%zjJOy!e%)W3g+4">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="comment" id="b[V_lonjkhpzkQrWre|0">
+                        <field name="COMMENT">Menü Übersicht</field>
+                        <next>
+                          <block type="controls_if" id="/z.WY`-k,!|KIyWwYu:C">
+                            <mutation elseif="1"></mutation>
+                            <value name="IF0">
+                              <block type="logic_operation" id="?-NKEu./;)0;R}cqYW;M" inline="false">
+                                <field name="OP">AND</field>
+                                <value name="A">
+                                  <block type="logic_compare" id="eQR3DPA65Ci_~CAz/Af[">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="w,#25-Qu~W183AA.g^S@">
+                                        <field name="VAR" id="gnB@?X,5r7x@g#b+v[NJ">Letzter_Absender</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="text" id="KXSs7XVyifzf@{oXfeD{">
+                                        <field name="TEXT">Ben</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="logic_operation" id="HPe0Lt?p5+*nfr7LHuVn" inline="false">
+                                    <field name="OP">OR</field>
+                                    <value name="A">
+                                      <block type="logic_compare" id="=IM{d=@Wh+Mw?Fdexn78">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block type="variables_get" id=";AzyRgiy^9lBYB93yh5d">
+                                            <field name="VAR" id="=A[nEvedx/u`(m[tCxjp">Letzter_Text_klein</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="text" id="pqT4eE0u{unJq+JF#cTK">
+                                            <field name="TEXT">übersicht</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="logic_compare" id="l*wu*d1FlrZIA*1{*SO2">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="vjdQQ?EgzG*F_}3ve,:q">
+                                            <field name="VAR" id="=A[nEvedx/u`(m[tCxjp">Letzter_Text_klein</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="text" id="w@`#XN0}uC|^RDQXJym?">
+                                            <field name="TEXT">ü</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="procedures_callcustomnoreturn" id="GEz;|qcjQ_EH]NQ20WKv">
+                                <mutation name="Menue_Uebersicht_Sven">
+                                  <arg name="Menue_Uebersicht_empfaenger"></arg>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block type="variables_get" id="37#/N$a+aghK3mx^y:%v">
+                                    <field name="VAR" id="gnB@?X,5r7x@g#b+v[NJ">Letzter_Absender</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <value name="IF1">
+                              <block type="logic_operation" id="eGLRxERPj8aFg^Va|PMb" inline="false">
+                                <field name="OP">AND</field>
+                                <value name="A">
+                                  <block type="logic_compare" id="uxT(fyysIj%THaICXHC9">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="Eyn9[(SqW[gLStAgDb%.">
+                                        <field name="VAR" id="gnB@?X,5r7x@g#b+v[NJ">Letzter_Absender</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="text" id="S{^A0yL(z!XA1w{0kQG(">
+                                        <field name="TEXT">Tobias</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="logic_operation" id="0[^+WCURgh)mVBVG{75q" inline="false">
+                                    <field name="OP">OR</field>
+                                    <value name="A">
+                                      <block type="logic_compare" id="4oz~5D3CR4OlIkaYc7!B">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="j(6xPR|xFHV?7]J@);AY">
+                                            <field name="VAR" id="=A[nEvedx/u`(m[tCxjp">Letzter_Text_klein</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="text" id="_r)s-xa9Ue3M`DWPJZg^">
+                                            <field name="TEXT">übersicht</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="logic_compare" id="]T6afs!vvPli!(n;ei0y">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="]h1?,z;n6PshZdEmsMUk">
+                                            <field name="VAR" id="=A[nEvedx/u`(m[tCxjp">Letzter_Text_klein</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="text" id="CvK=mc.)mLI]ykRX7]4#">
+                                            <field name="TEXT">ü</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO1">
+                              <block type="procedures_callcustomnoreturn" id="lq{=p@KUT{Y*.Tz,ocTH">
+                                <mutation name="Menue_Uebersicht_Sven">
+                                  <arg name="Menue_Uebersicht_empfaenger"></arg>
+                                </mutation>
+                                <value name="ARG0">
+                                  <block type="variables_get" id="M3b}5,Cr;(t@Os@;Kg@N">
+                                    <field name="VAR" id="gnB@?X,5r7x@g#b+v[NJ">Letzter_Absender</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="debug" id="ZcXiY:zhGF+VRP|lWJx9">
+                                <field name="Severity">log</field>
+                                <value name="TEXT">
+                                  <shadow type="text" id=";?k|Ti_Z?TA@VneaDqnh">
+                                    <field name="TEXT">Übersicht</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="comment" id="7+o_HazqBav1DVBio4P@">
+                                    <field name="COMMENT">Menü Temperatur</field>
+                                    <next>
+                                      <block type="controls_if" id="IveM==Ei=m{U%U7Qn}+C">
+                                        <value name="IF0">
+                                          <block type="logic_compare" id="pqt7vh.{Ois?Fj8:xJVg">
+                                            <field name="OP">EQ</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="/?K#^7+bhR{MipwHI66w">
+                                                <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="text" id="TDs:RvJ//UnY+{|4YwF1">
+                                                <field name="TEXT">Temperatur</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="procedures_callcustomnoreturn" id="2|5-XN(g9q2fM.Wb0wv/">
+                                            <mutation name="Menue_Temperatur">
+                                              <arg name="Menue_3D_Drucker_empfaenger"></arg>
+                                            </mutation>
+                                            <value name="ARG0">
+                                              <block type="variables_get" id=".f7nK-|XHy4aeUA%eS,4">
+                                                <field name="VAR" id="gnB@?X,5r7x@g#b+v[NJ">Letzter_Absender</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="comment" id="?mD#DD{rl_:ShO~+)5QY">
+                                            <field name="COMMENT">Temperatur Wohnzimmer</field>
+                                            <next>
+                                              <block type="controls_if" id="i/U2RQ_ZpqE1(P+tzG%Y">
+                                                <value name="IF0">
+                                                  <block type="logic_compare" id="Jc0Z@1w?fRLccxf|4Z%x">
+                                                    <field name="OP">EQ</field>
+                                                    <value name="A">
+                                                      <block type="variables_get" id="iJlE)uCzxhNkexY699-.">
+                                                        <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="B">
+                                                      <block type="text" id="#xpd{/3v%{sWaLjHNS4:">
+                                                        <field name="TEXT">Temperatur Wohnzimmer</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <statement name="DO0">
+                                                  <block type="telegram" id="R5|GsH`7-v2vAk4sk.li">
+                                                    <field name="INSTANCE"></field>
+                                                    <field name="LOG"></field>
+                                                    <field name="SILENT">FALSE</field>
+                                                    <field name="PARSEMODE">default</field>
+                                                    <value name="MESSAGE">
+                                                      <shadow type="text" id="7iW;lc)hjFk0E?!zgTx?">
+                                                        <field name="TEXT">text</field>
+                                                      </shadow>
+                                                      <block type="text_join" id="/[mx{4:hoFBLvxy6+9H)">
+                                                        <mutation items="7"></mutation>
+                                                        <value name="ADD0">
+                                                          <block type="text" id="hA=lxU0Cc+D/jBHT8J23">
+                                                            <field name="TEXT">Die Temperatur im Wohnzimmer: </field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="ADD1">
+                                                          <block type="get_value" id="U.)g6%ly/Bg3X6WI|~7S">
+                                                            <field name="ATTR">val</field>
+                                                            <field name="OID">sonoff.0.Wohnzimmer Temperatur.AM2301_Temperature</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="ADD2">
+                                                          <block type="text" id="jzMp0sr?0kFK{XyV7WK:">
+                                                            <field name="TEXT"> °C</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="ADD3">
+                                                          <block type="text" id="d2xE#]$1+7?[EAvW[^|-">
+                                                            <field name="TEXT">                                                               </field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="ADD4">
+                                                          <block type="text" id="U%u@Ax?CuYWixIMrPQ7z">
+                                                            <field name="TEXT">Die Luftfeuchtigkeit im Wohnzimmer: </field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="ADD5">
+                                                          <block type="get_value" id="$1bUQX~OCk^ThQ#VO4`J">
+                                                            <field name="ATTR">val</field>
+                                                            <field name="OID">sonoff.0.Wohnzimmer Temperatur.AM2301_Humidity</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="ADD6">
+                                                          <block type="text" id="##NIY:=%Q@|M]U=?S1qm">
+                                                            <field name="TEXT"> %</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <value name="USERNAME">
+                                                      <block type="variables_get" id=",Vsj-/2uER4h%y#9xM=n">
+                                                        <field name="VAR" id="gnB@?X,5r7x@g#b+v[NJ">Letzter_Absender</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </statement>
+                                                <next>
+                                                  <block type="comment" id="GDHg1iC3[byT}bm;qG%3">
+                                                    <field name="COMMENT">Temperatur Kinderzimmer</field>
+                                                    <next>
+                                                      <block type="controls_if" id="h}jl!}SpAwaB2Ps@VEu$">
+                                                        <value name="IF0">
+                                                          <block type="logic_compare" id="BO$QHkcbLq3SVVOs)x!8">
+                                                            <field name="OP">EQ</field>
+                                                            <value name="A">
+                                                              <block type="variables_get" id="^yz[yG8F2y:ZVk/=%|}1">
+                                                                <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="text" id="DWR{B4WTV$EsSbW1[xes">
+                                                                <field name="TEXT">Temperatur Kinderzimmer</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO0">
+                                                          <block type="telegram" id="9n[Bxs;^#})@z2n|mKCp">
+                                                            <field name="INSTANCE"></field>
+                                                            <field name="LOG"></field>
+                                                            <field name="SILENT">FALSE</field>
+                                                            <field name="PARSEMODE">default</field>
+                                                            <value name="MESSAGE">
+                                                              <shadow type="text">
+                                                                <field name="TEXT">text</field>
+                                                              </shadow>
+                                                              <block type="text_join" id="*bE|$l/K.fWGKx7sR01b">
+                                                                <mutation items="3"></mutation>
+                                                                <value name="ADD0">
+                                                                  <block type="text" id="6/C$aH!h$cb?GulJIs3K">
+                                                                    <field name="TEXT">Die Temperatur im Kinderzimmer: </field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD1">
+                                                                  <block type="get_value" id="B=AuC!U13M)`9Ot$BU`K">
+                                                                    <field name="ATTR">val</field>
+                                                                    <field name="OID">hmip.0.devices.3014F711A000201A499E7BA4.channels.1.valveActualTemperature</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD2">
+                                                                  <block type="text" id=";~12oMA]}GHx6rVknDoR">
+                                                                    <field name="TEXT"> °C</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <value name="USERNAME">
+                                                              <block type="variables_get" id="ey?r;.ku)S#~8*wrNR:v">
+                                                                <field name="VAR" id="gnB@?X,5r7x@g#b+v[NJ">Letzter_Absender</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                        <next>
+                                                          <block type="comment" id="cWr![LAg4.}E+4+z*cE6">
+                                                            <field name="COMMENT">Temperatur Klingel</field>
+                                                            <next>
+                                                              <block type="controls_if" id="h#:b{d,h}6TCSj{(7-hJ">
+                                                                <value name="IF0">
+                                                                  <block type="logic_compare" id="JCRTmtQ,O@eO*K:P+L1z">
+                                                                    <field name="OP">EQ</field>
+                                                                    <value name="A">
+                                                                      <block type="variables_get" id="]!h!fy,vr.w::]~qoD!Q">
+                                                                        <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="B">
+                                                                      <block type="text" id="mi+KLdNO/yx}{jF2Ix#%">
+                                                                        <field name="TEXT">Temperatur Klingel</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <statement name="DO0">
+                                                                  <block type="telegram" id="|;ti0]5Svur8(x`J*l|N">
+                                                                    <field name="INSTANCE"></field>
+                                                                    <field name="LOG"></field>
+                                                                    <field name="SILENT">FALSE</field>
+                                                                    <field name="PARSEMODE">default</field>
+                                                                    <value name="MESSAGE">
+                                                                      <shadow type="text">
+                                                                        <field name="TEXT">text</field>
+                                                                      </shadow>
+                                                                      <block type="text_join" id=":}0p{#o)H^d0VIvex,O`">
+                                                                        <mutation items="7"></mutation>
+                                                                        <value name="ADD0">
+                                                                          <block type="text" id="~HD}FpHwHbrV68NbW8K|">
+                                                                            <field name="TEXT">Die Temperatur im Vorgarten: </field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="ADD1">
+                                                                          <block type="get_value" id=";Ee@%8`pMZv8pV{x}PMB">
+                                                                            <field name="ATTR">val</field>
+                                                                            <field name="OID">sonoff.0.Klingel.AM2301_Temperature</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="ADD2">
+                                                                          <block type="text" id="`QnZ+};.?B!zbk[.}P%.">
+                                                                            <field name="TEXT"> °C</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="ADD3">
+                                                                          <block type="text" id="Vx:z@I246$6rE!Pz9-+`">
+                                                                            <field name="TEXT">                                                               </field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="ADD4">
+                                                                          <block type="text" id="n7Ry@@DX=,kX/9nc4s[[">
+                                                                            <field name="TEXT">Die Luftfeuchtigkeit im Vorgarten: </field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="ADD5">
+                                                                          <block type="get_value" id="%YL#~GmN/vkE6WSqj)l/">
+                                                                            <field name="ATTR">val</field>
+                                                                            <field name="OID">sonoff.0.Wohnzimmer Temperatur.AM2301_Humidity</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="ADD6">
+                                                                          <block type="text" id="GEX~|oIJ.k;|,%{pi~pt">
+                                                                            <field name="TEXT"> °C</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="USERNAME">
+                                                                      <block type="variables_get" id="{Bzglw$=:Dn]F(n6G`{2">
+                                                                        <field name="VAR" id="gnB@?X,5r7x@g#b+v[NJ">Letzter_Absender</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </statement>
+                                                                <next>
+                                                                  <block type="comment" id="p%GhVuGf}ZvUWmgE-`{%">
+                                                                    <field name="COMMENT">Menü Schaltungen</field>
+                                                                    <next>
+                                                                      <block type="controls_if" id="rZc@zo{]EKmr*RcTc{Sz">
+                                                                        <value name="IF0">
+                                                                          <block type="logic_compare" id="7I|!abRD0*SDH/kq6]3#">
+                                                                            <field name="OP">EQ</field>
+                                                                            <value name="A">
+                                                                              <block type="variables_get" id="r[X?75n{yk-SBJZ~C,_r">
+                                                                                <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="B">
+                                                                              <block type="text" id="Li(_]zP5@BV/;MUFI,b*">
+                                                                                <field name="TEXT">Schaltungen</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                        <statement name="DO0">
+                                                                          <block type="procedures_callcustomnoreturn" id="F//:l^i7izC[]3vl@]=^">
+                                                                            <mutation name="Menue_Schaltungen">
+                                                                              <arg name="Menue_Schaltungen_empfaenger"></arg>
+                                                                            </mutation>
+                                                                            <value name="ARG0">
+                                                                              <block type="variables_get" id="|09sp(8Hc_vGma!9tdkl">
+                                                                                <field name="VAR" id="gnB@?X,5r7x@g#b+v[NJ">Letzter_Absender</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </statement>
+                                                                        <next>
+                                                                          <block type="comment" id="Izm@wm*u9iM_%a|ODT@X">
+                                                                            <field name="COMMENT">Kinderzimmer schalten</field>
+                                                                            <next>
+                                                                              <block type="controls_if" id="RUu.hxh.4u34[-]l*4dx">
+                                                                                <mutation elseif="1"></mutation>
+                                                                                <value name="IF0">
+                                                                                  <block type="logic_compare" id="q^a%LQgoHmKBynLS8zke">
+                                                                                    <field name="OP">EQ</field>
+                                                                                    <value name="A">
+                                                                                      <block type="variables_get" id="m65`]O!nIPO45R/D%vGC">
+                                                                                        <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="B">
+                                                                                      <block type="text" id="iGSx!_rq4Fy?R*OEdcmS">
+                                                                                        <field name="TEXT">Kinderzimmer An</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <statement name="DO0">
+                                                                                  <block type="control" id="TJnI`ukE:o@(9k|xDt@X">
+                                                                                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                                                                    <field name="OID">javascript.0.Szenen.Guten_Morgen</field>
+                                                                                    <field name="WITH_DELAY">FALSE</field>
+                                                                                    <value name="VALUE">
+                                                                                      <block type="logic_boolean" id="s.s`dUd?8`;GCpGmB.`9">
+                                                                                        <field name="BOOL">TRUE</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </statement>
+                                                                                <value name="IF1">
+                                                                                  <block type="logic_compare" id="=eCjK~e6M5L,PA]2/I}N">
+                                                                                    <field name="OP">EQ</field>
+                                                                                    <value name="A">
+                                                                                      <block type="variables_get" id="A~cZN)c-T1NXVy;FXA4P">
+                                                                                        <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="B">
+                                                                                      <block type="text" id="zS-Z]`PxuW=d3~qs;oUk">
+                                                                                        <field name="TEXT">Kinderzimmer Aus</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <statement name="DO1">
+                                                                                  <block type="control" id="F(yCi*YI+MK)6PEhzJ.]">
+                                                                                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                                                                    <field name="OID">javascript.0.Szenen.Kinderzimmer_aus</field>
+                                                                                    <field name="WITH_DELAY">FALSE</field>
+                                                                                    <value name="VALUE">
+                                                                                      <block type="logic_boolean" id="6fj8}/td%[ATc!RL`U#H">
+                                                                                        <field name="BOOL">FALSE</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </statement>
+                                                                                <next>
+                                                                                  <block type="comment" id="CHmjjh.dszyhieHSV8/U">
+                                                                                    <field name="COMMENT">Brunnen schalten</field>
+                                                                                    <next>
+                                                                                      <block type="controls_if" id="{5=y8.P;+uaSx*8u,o:,">
+                                                                                        <mutation elseif="1"></mutation>
+                                                                                        <value name="IF0">
+                                                                                          <block type="logic_compare" id="s0mjsV34a/)rt1bykxpM">
+                                                                                            <field name="OP">EQ</field>
+                                                                                            <value name="A">
+                                                                                              <block type="variables_get" id="ga`Qi/FP_P1WtdVJY-#3">
+                                                                                                <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <value name="B">
+                                                                                              <block type="text" id="J@bF]Z_l]k18`_sLVK~m">
+                                                                                                <field name="TEXT">Brunnen An</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <statement name="DO0">
+                                                                                          <block type="control" id="BN34^)7JM7}=Z|hbT;3]">
+                                                                                            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                                                                            <field name="OID">Sonoff-POW-2 POWER</field>
+                                                                                            <field name="WITH_DELAY">FALSE</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="logic_boolean" id="Wa%*,dhJ?c0vPq^QUg%M">
+                                                                                                <field name="BOOL">TRUE</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </statement>
+                                                                                        <value name="IF1">
+                                                                                          <block type="logic_compare" id="T*pIqRO~egfRU7(HKiQ@">
+                                                                                            <field name="OP">EQ</field>
+                                                                                            <value name="A">
+                                                                                              <block type="variables_get" id="!f%4o0ZhImQ@Uo_ae_iJ">
+                                                                                                <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <value name="B">
+                                                                                              <block type="text" id="LRxZz/5r8AG%+A`p1jN5">
+                                                                                                <field name="TEXT">Brunnen Aus</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <statement name="DO1">
+                                                                                          <block type="control" id=".wqgK~I=d!~uv;diZs6O">
+                                                                                            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                                                                            <field name="OID">Sonoff-POW-2 POWER</field>
+                                                                                            <field name="WITH_DELAY">FALSE</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="logic_boolean" id="e3hNhI:aTHG]~V@Q|!w3">
+                                                                                                <field name="BOOL">FALSE</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </statement>
+                                                                                        <next>
+                                                                                          <block type="comment" id="~B6e~;AGqx}KS^235bTu">
+                                                                                            <field name="COMMENT">Menü Heizung</field>
+                                                                                            <next>
+                                                                                              <block type="controls_if" id="dYAv*:ftJ`Dm$mq/46`x">
+                                                                                                <value name="IF0">
+                                                                                                  <block type="logic_compare" id="^%x+#O_z{AtJ@ES*$;-:">
+                                                                                                    <field name="OP">EQ</field>
+                                                                                                    <value name="A">
+                                                                                                      <block type="variables_get" id="SO4Uu)+n_E1Gb:c8`W.f">
+                                                                                                        <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <value name="B">
+                                                                                                      <block type="text" id="nGXYKhVr)r9[6``opn}}">
+                                                                                                        <field name="TEXT">Heizung</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <statement name="DO0">
+                                                                                                  <block type="procedures_callcustomnoreturn" id="oV)JgQP4F*c[S@m_tTU@">
+                                                                                                    <mutation name="Menue_Heizung">
+                                                                                                      <arg name="Menue_3D_Drucker_Aus_empfaenger"></arg>
+                                                                                                    </mutation>
+                                                                                                    <value name="ARG0">
+                                                                                                      <block type="variables_get" id=";_uBYy%q4*m_/C`d`fwO">
+                                                                                                        <field name="VAR" id="gnB@?X,5r7x@g#b+v[NJ">Letzter_Absender</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </statement>
+                                                                                                <next>
+                                                                                                  <block type="comment" id="UR[;C{LS0.g-}g!?_^%%">
+                                                                                                    <field name="COMMENT">Heizung Ich gehe</field>
+                                                                                                    <next>
+                                                                                                      <block type="controls_if" id="644t5`S^vIw[W-5$pojL">
+                                                                                                        <value name="IF0">
+                                                                                                          <block type="logic_compare" id="YSEx%f`ICC}*ev241eT=">
+                                                                                                            <field name="OP">EQ</field>
+                                                                                                            <value name="A">
+                                                                                                              <block type="variables_get" id="wtW|Mx6c1cnw9-^+z[^w">
+                                                                                                                <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <value name="B">
+                                                                                                              <block type="text" id="olHN:=E(ZWV,OQ.PKOL!">
+                                                                                                                <field name="TEXT">Ich gehe</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <statement name="DO0">
+                                                                                                          <block type="update" id="pBwk+][m_=XYQ9n#Jq:o">
+                                                                                                            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                                                                                            <field name="OID">hmip.0.devices.3014F711A000201A499E7BA4.channels.1.setPointTemperature</field>
+                                                                                                            <field name="WITH_DELAY">FALSE</field>
+                                                                                                            <value name="VALUE">
+                                                                                                              <block type="text" id="xR3yY`$V0Y;]tbx[HZUT">
+                                                                                                                <field name="TEXT">30</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                          </block>
+                                                                                                        </statement>
+                                                                                                        <next>
+                                                                                                          <block type="comment" id=":pass#$!/C~P{d(n{=0-">
+                                                                                                            <field name="COMMENT">Heizung Ich komme gleich</field>
+                                                                                                            <next>
+                                                                                                              <block type="controls_if" id="[JmqrY6]U3t{qQt3Pyaz">
+                                                                                                                <value name="IF0">
+                                                                                                                  <block type="logic_operation" id="TU4nhceVM$P!)8][i(in" inline="false">
+                                                                                                                    <field name="OP">AND</field>
+                                                                                                                    <value name="A">
+                                                                                                                      <block type="logic_compare" id="iIOx509kP5el:,{Grda^">
+                                                                                                                        <field name="OP">EQ</field>
+                                                                                                                        <value name="A">
+                                                                                                                          <block type="variables_get" id="@g6yhg*D-JUXQnK1Uz(m">
+                                                                                                                            <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="B">
+                                                                                                                          <block type="text" id="7u|U){eU25@57oLxTrw@">
+                                                                                                                            <field name="TEXT">Ich komme gleich</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                    <value name="B">
+                                                                                                                      <block type="logic_compare" id="+=#DN0lD!(+)$3-=XEv5">
+                                                                                                                        <field name="OP">GT</field>
+                                                                                                                        <value name="A">
+                                                                                                                          <block type="get_value" id="y=C8}=fGt|wMVjyxN[o/">
+                                                                                                                            <field name="ATTR">val</field>
+                                                                                                                            <field name="OID">hmip.0.devices.3014F711A000201A499E7BA4.channels.1.valveActualTemperature</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="B">
+                                                                                                                          <block type="text" id="W$ePqN7%Wf8!8]pw$)kh">
+                                                                                                                            <field name="TEXT">22</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <statement name="DO0">
+                                                                                                                  <block type="update" id="4@Q}/[wp4:-GIIJnH)|R">
+                                                                                                                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                                                                                                    <field name="OID">hmip.0.devices.3014F711A000201A499E7BA4.channels.1.setPointTemperature</field>
+                                                                                                                    <field name="WITH_DELAY">FALSE</field>
+                                                                                                                    <value name="VALUE">
+                                                                                                                      <block type="text" id="92G;/KP+HqU`}j01!HyX">
+                                                                                                                        <field name="TEXT">22</field>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                  </block>
+                                                                                                                </statement>
+                                                                                                                <next>
+                                                                                                                  <block type="comment" id="`.6%OD@l_y,N=)=/PNja">
+                                                                                                                    <field name="COMMENT">Heizung Mir ist kalt</field>
+                                                                                                                    <next>
+                                                                                                                      <block type="controls_if" id="HVs^S!BkYw$XMb[ow$w[">
+                                                                                                                        <value name="IF0">
+                                                                                                                          <block type="logic_compare" id="^/Im5CkTaSCvG+*5+.f=">
+                                                                                                                            <field name="OP">EQ</field>
+                                                                                                                            <value name="A">
+                                                                                                                              <block type="variables_get" id="85xAMx^_!N3/tR(XlMEC">
+                                                                                                                                <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                            <value name="B">
+                                                                                                                              <block type="text" id="pF*556~!tN6s[uRF)3be">
+                                                                                                                                <field name="TEXT">Mir ist kalt</field>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <statement name="DO0">
+                                                                                                                          <block type="update" id=",.}UUn0;J[cgx[5CS/e;">
+                                                                                                                            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                                                                                                            <field name="OID">hmip.0.devices.3014F711A000201A499E7BA4.channels.1.setPointTemperature</field>
+                                                                                                                            <field name="WITH_DELAY">FALSE</field>
+                                                                                                                            <value name="VALUE">
+                                                                                                                              <block type="text" id="[Q4g:2xpNwmSU08El@yw">
+                                                                                                                                <field name="TEXT">30</field>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                          </block>
+                                                                                                                        </statement>
+                                                                                                                        <next>
+                                                                                                                          <block type="comment" id="cc%MkpQN9+Q5~4v.t)o?">
+                                                                                                                            <field name="COMMENT">Heizung Mir ist warm</field>
+                                                                                                                            <next>
+                                                                                                                              <block type="controls_if" id="E})#M=pG$H04ax{:/*Qj">
+                                                                                                                                <value name="IF0">
+                                                                                                                                  <block type="logic_compare" id="DLEAu#En1@VMhGA+Tffn">
+                                                                                                                                    <field name="OP">EQ</field>
+                                                                                                                                    <value name="A">
+                                                                                                                                      <block type="variables_get" id="*fGLG5FwKIa]OA{M5O:j">
+                                                                                                                                        <field name="VAR" id="oVY88EMg^DWWF^Sp.43J">Letzter_Text</field>
+                                                                                                                                      </block>
+                                                                                                                                    </value>
+                                                                                                                                    <value name="B">
+                                                                                                                                      <block type="text" id="c_yY1`J3oB(.lMBp)DGn">
+                                                                                                                                        <field name="TEXT">Mir ist warm</field>
+                                                                                                                                      </block>
+                                                                                                                                    </value>
+                                                                                                                                  </block>
+                                                                                                                                </value>
+                                                                                                                                <statement name="DO0">
+                                                                                                                                  <block type="update" id="!+m]$3EfwR*.7AK..tJR">
+                                                                                                                                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                                                                                                                    <field name="OID">hmip.0.devices.3014F711A000201A499E7BA4.channels.1.setPointTemperature</field>
+                                                                                                                                    <field name="WITH_DELAY">FALSE</field>
+                                                                                                                                    <value name="VALUE">
+                                                                                                                                      <block type="text" id="}WZohzGTOXgtl.S(b.pL">
+                                                                                                                                        <field name="TEXT">10</field>
+                                                                                                                                      </block>
+                                                                                                                                    </value>
+                                                                                                                                  </block>
+                                                                                                                                </statement>
+                                                                                                                              </block>
+                                                                                                                            </next>
+                                                                                                                          </block>
+                                                                                                                        </next>
+                                                                                                                      </block>
+                                                                                                                    </next>
+                                                                                                                  </block>
+                                                                                                                </next>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defcustomnoreturn" id="0P}7J-E=yi[ohD7.N+4A" x="813" y="163">
+    <mutation statements="false">
+      <arg name="Menue_3D_Drucker_Aus_empfaenger" varid="?=7-YlY4n?zEUn.TMU+4"></arg>
+    </mutation>
+    <field name="NAME">Menue_Heizung</field>
+    <field name="SCRIPT">c2VuZFRvKCd0ZWxlZ3JhbS4wJywgew0KICAgIHVzZXI6IChNZW51ZV8zRF9EcnVja2VyX2VtcGZhZW5nZXIpLA0KICAgIHRleHQ6ICAnQml0dGUgd8OkaGxlbicsDQogICAgcmVwbHlfbWFya3VwOiB7DQogICAga2V5Ym9hcmQ6IFsNCiAgICAgICAgICAgIFsnw5xiZXJzaWNodCddLA0KICAgICAgICAgICAgWydJY2ggZ2VoZScsICdJY2gga29tbWUgZ2xlaWNoJ10sDQogICAgICAgICAgICBbJ01pciBpc3Qga2FsdCcsICdNaXIgaXN0IHdhcm0nXSwNCiAgICAgICAgICAgIFsnQ29vbWluZyBTb29uJywgJ0Nvb21pbmcgU29vbiddLA0KICAgICAgICBdLA0KICAgIHJlc2l6ZV9rZXlib2FyZDogICB0cnVlLA0KICAgIG9uZV90aW1lX2tleWJvYXJkOiB0cnVlDQogICAgfQ0KfSk7</field>
+    <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+  </block>
+  <block type="procedures_defcustomnoreturn" id="W)n`zI%4Z8uO4h6r[ZT6" x="813" y="188">
+    <mutation statements="false">
+      <arg name="Menue_Schaltungen_empfaenger" varid="l[W*Yy%ZPP5O#`+::D`-"></arg>
+    </mutation>
+    <field name="NAME">Menue_Schaltungen</field>
+    <field name="SCRIPT">c2VuZFRvKCd0ZWxlZ3JhbS4wJywgew0KICAgIHVzZXI6IChNZW51ZV9TY2hhbHR1bmdlbl9lbXBmYWVuZ2VyKSwNCiAgICB0ZXh0OiAgJ0JpdHRlIHfDpGhsZW4nLA0KICAgIHJlcGx5X21hcmt1cDogew0KICAgIGtleWJvYXJkOiBbDQogICAgICAgICAgICBbJ8OcYmVyc2ljaHQnXSwNCiAgICAgICAgICAgIFsnS2luZGVyemltbWVyIEFuJywgJ0tpbmRlcnppbW1lciBBdXMnXSwNCiAgICAgICAgICAgIFsnQnJ1bm5lbiBBbicsICdCcnVubmVuIEF1cyddLA0KICAgICAgICBdLA0KICAgICAgICByZXNpemVfa2V5Ym9hcmQ6ICAgdHJ1ZSwNCiAgICAgICAgb25lX3RpbWVfa2V5Ym9hcmQ6IHRydWUNCiAgICB9DQp9KTs=</field>
+    <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+  </block>
+  <block type="procedures_defnoreturn" id="SqbfeC:FLew+!~kWWlJN" collapsed="true" x="813" y="238">
+    <mutation>
+      <arg name="Telegram_Text" varid="A+MNuw3@}4rwqMt$|1Y`"></arg>
+      <arg name="Telegram_Empfaenger" varid="ha8QX~M5_bV6YcIN_l`L"></arg>
+    </mutation>
+    <field name="NAME">Telegram senden</field>
+    <comment pinned="false" h="80" w="160">Beschreibe diese Funktion …</comment>
+    <statement name="STACK">
+      <block type="telegram" id="ymEjgF9__yMq0u:?d^OZ">
+        <field name="INSTANCE"></field>
+        <field name="LOG"></field>
+        <field name="SILENT">FALSE</field>
+        <field name="PARSEMODE">default</field>
+        <value name="MESSAGE">
+          <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="l:WircGYU]PQ8mK?#i;.">
+            <field name="TEXT">text</field>
+          </shadow>
+          <block type="variables_get" id="7Jb)y7BL}o0k-V1+!LGq">
+            <field name="VAR" id="A+MNuw3@}4rwqMt$|1Y`">Telegram_Text</field>
+          </block>
+        </value>
+        <value name="USERNAME">
+          <block type="variables_get" id="[zE8u9XDeNRqLTZag|;5">
+            <field name="VAR" id="ha8QX~M5_bV6YcIN_l`L">Telegram_Empfaenger</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>
