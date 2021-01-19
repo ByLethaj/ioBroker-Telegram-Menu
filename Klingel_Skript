@@ -1,0 +1,44 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="on" id="R?o(fmZ9;HJu,)tsOE:y" x="-262" y="-462">
+    <field name="OID">sonoff.0.Klingel.POWER</field>
+    <field name="CONDITION">true</field>
+    <field name="ACK_CONDITION"></field>
+    <statement name="STATEMENT">
+      <block type="telegram" id="],2?kefUTvj-QU7x1`dT">
+        <field name="INSTANCE"></field>
+        <field name="LOG"></field>
+        <field name="SILENT">FALSE</field>
+        <field name="PARSEMODE">default</field>
+        <value name="MESSAGE">
+          <shadow type="text" id="%4j]=Gc,lf$}4jE3gQIw">
+            <field name="TEXT">Es hat geklingelt!</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="update" id="KxG%jnc?ZxedV}`V),jV">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+            <field name="OID">Object ID</field>
+            <field name="WITH_DELAY">FALSE</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="5_K5vf1w-P(,z`*:z9by">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="update" id="h^3`B;,*D!I(CF-VFDZ@">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                <field name="OID">Object ID</field>
+                <field name="WITH_DELAY">FALSE</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="#IJHw,@|^CSZ*`,oj^hZ">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
